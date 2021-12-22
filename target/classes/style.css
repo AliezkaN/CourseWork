@@ -1,0 +1,24 @@
+#1{
+    -fx-background-color:  #b46e6e;
+}
+
+#1:hover{
+    -fx-background-color:  #a85757;
+}
+
+#1 :pressed{
+    -fx-background-color: #e82323;
+}
+
+#2{
+    -fx-background-radius:  30 30 30 30;
+    -fx-background-color:  #c95e7d;
+}
+
+#2:hover{
+    -fx-background-color:  #a83858;
+}
+
+#2 :pressed{
+    -fx-background-color: #e82323;
+}

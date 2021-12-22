@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="575.0" minWidth="750.0" prefHeight="575.0" prefWidth="1070.0" style="-fx-background-color: #9e968a;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nahorniak.aircompany.HomePageController">
+   <children>
+      <AnchorPane prefHeight="574.0" prefWidth="210.0" style="-fx-background-color: #e8c792;">
+         <children>
+            <AnchorPane layoutX="-5.0" prefHeight="179.0" prefWidth="217.0">
+               <children>
+                  <ImageView fitHeight="276.0" fitWidth="213.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Button id="2" fx:id="airportButton" layoutX="23.0" layoutY="219.0" mnemonicParsing="false" onAction="#airportButtonOnAction" prefHeight="42.0" prefWidth="179.0" stylesheets="@../../../style.css" text="Airports">
+               <font>
+                  <Font name="Impact" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="2" fx:id="planesButton" layoutX="23.0" layoutY="276.0" mnemonicParsing="false" onAction="#planesButtonOnAction" prefHeight="42.0" prefWidth="179.0" stylesheets="@../../../style.css" text="Planes">
+               <font>
+                  <Font name="Impact" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="2" fx:id="flightsButton" layoutX="23.0" layoutY="330.0" mnemonicParsing="false" onAction="#flightsButtonOnAction" prefHeight="42.0" prefWidth="179.0" stylesheets="@../../../style.css" text="Flights">
+               <font>
+                  <Font name="Impact" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="2" fx:id="exitButton" layoutX="77.0" layoutY="527.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="34.0" prefWidth="70.0" stylesheets="@../../../style.css" text="Exit">
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children></AnchorPane>
+      <AnchorPane layoutX="224.0" prefHeight="54.0" prefWidth="525.0">
+         <children>
+            <Label fx:id="welcomeMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-9.0" prefHeight="54.0" prefWidth="856.0" style="-fx-background-color: #e8c792;" text="Welcome in International Airlines menu" textFill="#c95e7d">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="holderPane" layoutX="217.0" layoutY="54.0" prefHeight="522.0" prefWidth="856.0" />
+   </children>
+</AnchorPane>

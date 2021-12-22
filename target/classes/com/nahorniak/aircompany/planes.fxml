@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="522.0" prefWidth="858.0" style="-fx-background-color: #7b7878;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nahorniak.aircompany.PlanesPageController">
+   <children>
+      <AnchorPane layoutX="156.0" prefHeight="350.0" prefWidth="702.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <TableView fx:id="planes_table" onMouseClicked="#getSelected" prefHeight="350.0" prefWidth="696.0">
+              <columns>
+                <TableColumn fx:id="col_id" prefWidth="44.7999267578125" text="Id" />
+                <TableColumn fx:id="col_name" prefWidth="79.20001220703125" text="Name" />
+                  <TableColumn fx:id="col_type" prefWidth="72.79998779296875" text="Type" />
+                  <TableColumn fx:id="col_fuel_capacity" prefWidth="84.0" text="Fuel Capacity" />
+                  <TableColumn fx:id="col_fuel_usage" prefWidth="86.39999389648438" text="Fuel Usage" />
+                  <TableColumn fx:id="col_total_seats" prefWidth="69.60003662109375" text="Total Seats" />
+                  <TableColumn fx:id="col_max_range" prefWidth="74.4000244140625" text="Max Range" />
+                  <TableColumn fx:id="col_load_capacity" prefWidth="84.00006103515625" text="Load Capacity" />
+                  <TableColumn fx:id="col_crew_capacity" prefWidth="96.0" text="Crew Capacity" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Circle fill="#b9bf26" layoutX="596.0" layoutY="436.0" radius="78.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.46666666865348816" blue="1.0" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Circle>
+      <Circle fill="#b3ffb3" layoutX="766.0" layoutY="436.0" radius="78.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.9578947424888611" green="0.007095516659319401" blue="0.007095516659319401" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Circle>
+      <Label alignment="CENTER" layoutX="682.0" layoutY="373.0" prefHeight="46.0" prefWidth="167.0" text="Total load capacity" textFill="#0f1500">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="532.0" layoutY="380.0" prefHeight="14.0" prefWidth="126.0" text="Total seats">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="tsLabel" alignment="CENTER" layoutX="532.0" layoutY="418.0" prefHeight="26.0" prefWidth="126.0" text="0">
+         <font>
+            <Font name="DejaVu Sans Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="tlcLabel" alignment="CENTER" layoutX="701.0" layoutY="420.0" prefHeight="26.0" prefWidth="126.0" text="0">
+         <font>
+            <Font name="DejaVu Sans Bold" size="21.0" />
+         </font>
+      </Label>
+      <TextField id="2" fx:id="txt_id" layoutX="7.0" layoutY="31.0" prefHeight="26.0" prefWidth="142.0" promptText="id" />
+      <TextField fx:id="txt_name" layoutX="7.0" layoutY="68.0" prefHeight="26.0" prefWidth="142.0" promptText="name" />
+      <TextField fx:id="txt_type" layoutX="7.0" layoutY="102.0" prefHeight="26.0" prefWidth="142.0" promptText="type" />
+      <TextField fx:id="txt_fuelCapacity" layoutX="7.0" layoutY="136.0" prefHeight="26.0" prefWidth="142.0" promptText="fuel capacity" />
+      <TextField fx:id="txt_fuelUsage" layoutX="7.0" layoutY="169.0" prefHeight="26.0" prefWidth="142.0" promptText="fuel usage" />
+      <TextField fx:id="txt_totalSeats" layoutX="7.0" layoutY="202.0" prefHeight="26.0" prefWidth="142.0" promptText="total seats" />
+      <TextField fx:id="txt_maxRange" layoutX="7.0" layoutY="234.0" prefHeight="26.0" prefWidth="142.0" promptText="max range" />
+      <TextField fx:id="txt_loadCapacity" layoutX="7.0" layoutY="268.0" prefHeight="26.0" prefWidth="142.0" promptText="load capacity" />
+      <TextField fx:id="txt_crewCapacity" layoutX="7.0" layoutY="303.0" prefHeight="26.0" prefWidth="142.0" promptText="crew capacity" />
+      <Button id="2" layoutX="19.0" layoutY="371.0" mnemonicParsing="false" onAction="#addPlanes" prefHeight="38.0" prefWidth="118.0" stylesheets="@../../../style.css" text="Add">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Impact" size="15.0" />
+         </font>
+      </Button>
+      <Button id="2" layoutX="19.0" layoutY="416.0" mnemonicParsing="false" onAction="#editPlanes" prefHeight="38.0" prefWidth="118.0" stylesheets="@../../../style.css" text="Update">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Impact" size="15.0" />
+         </font>
+      </Button>
+      <Button id="2" layoutX="19.0" layoutY="462.0" mnemonicParsing="false" onAction="#removePlane" prefHeight="38.0" prefWidth="118.0" stylesheets="@../../../style.css" text="Remove">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Impact" size="15.0" />
+         </font>
+      </Button>
+      <RadioButton fx:id="rb_fuel_capacity" layoutX="158.0" layoutY="370.0" mnemonicParsing="false" onAction="#fuelCapacityOnAction" text="fuel capacity">
+         <toggleGroup>
+            <ToggleGroup fx:id="Choice" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="rb_fuel_usage" layoutX="158.0" layoutY="390.0" mnemonicParsing="false" onAction="#fuelUsageOnAction" text="fuel usage" toggleGroup="$Choice" />
+      <RadioButton fx:id="rb_total_seats" layoutX="158.0" layoutY="410.0" mnemonicParsing="false" onAction="#totalSeatsOnAction" text="total seats" toggleGroup="$Choice" />
+      <RadioButton fx:id="rb_max_range" layoutX="158.0" layoutY="430.0" mnemonicParsing="false" onAction="#maxRangeOnAction" text="max range" toggleGroup="$Choice" />
+      <RadioButton fx:id="rb_load_capacity" layoutX="158.0" layoutY="450.0" mnemonicParsing="false" onAction="#loadCapacityOnAction" text="load capacity" toggleGroup="$Choice" />
+      <RadioButton fx:id="rb_crew_capacity" layoutX="158.0" layoutY="470.0" mnemonicParsing="false" onAction="#crewCapacityOnAction" text="crew capacity" toggleGroup="$Choice" />
+      <TextField fx:id="boundStart" layoutX="277.0" layoutY="364.0" prefHeight="26.0" prefWidth="91.0" promptText="start of bound" />
+      <TextField fx:id="boundEnd" layoutX="383.0" layoutY="364.0" prefHeight="26.0" prefWidth="91.0" promptText="end of bound" />
+      <Button id="2" layoutX="256.0" layoutY="442.0" mnemonicParsing="false" onAction="#filterPlanes" prefHeight="38.0" prefWidth="118.0" stylesheets="@../../../style.css" text="Filter planes">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Impact" size="15.0" />
+         </font>
+      </Button>
+      <Button id="2" layoutX="383.0" layoutY="442.0" mnemonicParsing="false" onAction="#showPlanes" prefHeight="38.0" prefWidth="118.0" stylesheets="@../../../style.css" text="Show all planes">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Impact" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="messageLabel" alignment="CENTER" layoutX="7.0" layoutY="341.0" prefHeight="18.0" prefWidth="142.0" textFill="#35e43b" />
+      <Label fx:id="messageLabel1" alignment="CENTER" layoutX="6.0" layoutY="335.0" prefHeight="18.0" prefWidth="142.0" textFill="#611111" />
+      <Label fx:id="messageLabel3" alignment="CENTER" layoutX="251.0" layoutY="419.0" prefHeight="18.0" prefWidth="246.0" textFill="#611111">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="messageLabel2" alignment="CENTER" layoutX="251.0" layoutY="402.0" prefHeight="18.0" prefWidth="246.0" textFill="#35e43b">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="messageLabel4" alignment="CENTER" layoutX="7.0" layoutY="350.0" prefHeight="18.0" prefWidth="142.0" textFill="#611111" />
+   </children>
+</AnchorPane>

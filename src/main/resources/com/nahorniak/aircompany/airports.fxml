@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="airportsPane" prefHeight="522.0" prefWidth="856.0" style="-fx-background-color: #7b7878;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nahorniak.aircompany.AirportsPageController">
+   <children>
+      <AnchorPane layoutX="233.0" prefHeight="518.0" prefWidth="621.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <TableView fx:id="table_airports" onMouseClicked="#getSelected" prefHeight="518.0" prefWidth="622.0">
+              <columns>
+                <TableColumn fx:id="col_id" prefWidth="210.39996337890625" text="Id" />
+                <TableColumn fx:id="col_country" prefWidth="202.4000244140625" text="Country" />
+                  <TableColumn fx:id="col_city" prefWidth="230.4000244140625" text="City" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Button id="2" layoutX="60.0" layoutY="432.0" mnemonicParsing="false" onAction="#removeAirport" prefHeight="38.0" prefWidth="118.0" stylesheets="@../../../style.css" text="Remove">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Impact" size="14.0" />
+         </font></Button>
+      <Button id="2" layoutX="60.0" layoutY="373.0" mnemonicParsing="false" onAction="#editAirports" prefHeight="38.0" prefWidth="118.0" stylesheets="@../../../style.css" text="Update">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Impact" size="14.0" />
+         </font></Button>
+      <Button id="2" layoutX="60.0" layoutY="316.0" mnemonicParsing="false" onAction="#addAirports" prefHeight="38.0" prefWidth="118.0" stylesheets="@../../../style.css" text="Add">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Impact" size="15.0" />
+         </font></Button>
+      <TextField fx:id="txt_country" layoutX="60.0" layoutY="140.0" prefHeight="38.0" prefWidth="118.0" promptText="Country" />
+      <TextField fx:id="txt_city" layoutX="60.0" layoutY="210.0" prefHeight="38.0" prefWidth="118.0" promptText="City" />
+      <Label fx:id="messageLabel" alignment="CENTER" layoutX="24.0" layoutY="271.0" prefHeight="26.0" prefWidth="187.0" textFill="#35e43b">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label fx:id="messageLabel1" alignment="CENTER" layoutX="6.0" layoutY="284.0" prefHeight="26.0" prefWidth="220.0" textFill="#611111">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <TextField fx:id="txt_id" layoutX="60.0" layoutY="77.0" prefHeight="38.0" prefWidth="118.0" promptText="Id" />
+   </children>
+</AnchorPane>

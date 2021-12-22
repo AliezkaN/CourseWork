@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="522.0" prefWidth="856.0" style="-fx-background-color: #7b7878;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nahorniak.aircompany.FlightsPageController">
+   <children>
+      <AnchorPane layoutX="241.0" prefHeight="522.0" prefWidth="612.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <TableView fx:id="flightsTable" layoutX="-2.0" onMouseClicked="#getSelected" prefHeight="522.0" prefWidth="612.0">
+              <columns>
+                <TableColumn fx:id="col_id" prefWidth="48.0" text="Id" />
+                <TableColumn fx:id="col_dep_airport_id" prefWidth="94.39996337890625" text="dep_airport_id" />
+                  <TableColumn fx:id="col_arrival_airport_id" prefWidth="104.0" text="arrival_airport_id" />
+                  <TableColumn fx:id="col_departure_time" prefWidth="119.99996948242188" text="departure_time" />
+                  <TableColumn fx:id="col_arrival_time" prefWidth="118.4000244140625" text="arrival_time" />
+                  <TableColumn fx:id="col_planeId" prefWidth="64.0" text="plane_id" />
+                  <TableColumn fx:id="col_range" prefWidth="63.199951171875" text="range" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+      <TextField fx:id="txt_id" layoutX="37.0" layoutY="24.0" prefHeight="32.0" prefWidth="175.0" promptText="Id" />
+      <TextField fx:id="txt_depId" layoutX="37.0" layoutY="67.0" prefHeight="32.0" prefWidth="175.0" promptText="departure airport id" />
+      <TextField fx:id="txt_arrId" layoutX="37.0" layoutY="109.0" prefHeight="32.0" prefWidth="175.0" promptText="arrival airport id" />
+      <TextField fx:id="txt_planeId" layoutX="37.0" layoutY="248.0" prefHeight="32.0" prefWidth="175.0" promptText="plane id" />
+      <TextField fx:id="txt_range" layoutX="36.0" layoutY="287.0" prefHeight="32.0" prefWidth="175.0" promptText="range" />
+      <Button id="2" layoutX="65.0" layoutY="376.0" mnemonicParsing="false" onAction="#addFlight" prefHeight="38.0" prefWidth="118.0" stylesheets="@../../../style.css" text="Add">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Impact" size="15.0" />
+         </font>
+      </Button>
+      <Button id="2" layoutX="65.0" layoutY="423.0" mnemonicParsing="false" onAction="#editFlight" prefHeight="38.0" prefWidth="118.0" stylesheets="@../../../style.css" text="Update">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Impact" size="15.0" />
+         </font>
+      </Button>
+      <Button id="2" layoutX="65.0" layoutY="469.0" mnemonicParsing="false" onAction="#removeFlight" prefHeight="38.0" prefWidth="118.0" stylesheets="@../../../style.css" text="Remove">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Impact" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txt_depTime" layoutX="36.0" layoutY="150.0" prefHeight="32.0" prefWidth="175.0" promptText="departure time" />
+      <TextField fx:id="txt_arrivalTime" layoutX="36.0" layoutY="210.0" prefHeight="32.0" prefWidth="175.0" promptText="arrival time" />
+      <Label layoutX="36.0" layoutY="185.0" prefHeight="18.0" prefWidth="233.0" text="DateTime Format : YYYY-MM-DD hh:mm:ss " textFill="#07ff41">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+      <Label fx:id="messageLabel" alignment="CENTER" layoutX="18.0" layoutY="336.0" prefHeight="18.0" prefWidth="215.0" textFill="#0aef62" />
+      <Label fx:id="messageLabel1" alignment="CENTER" layoutX="16.0" layoutY="345.0" prefHeight="18.0" prefWidth="215.0" textFill="#611111" />
+   </children>
+</AnchorPane>
